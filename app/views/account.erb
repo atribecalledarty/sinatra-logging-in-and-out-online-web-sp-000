@@ -6,7 +6,12 @@
     <link rel="stylesheet" href="stylesheets/bootstrap.css" type="text/css">  
   </head>
   <body id="page-top">
-    <a href="/logout">Log Out</a>
+    <% if is_logged_in?(session) %>
+      <h1>Username: <%= current_user(session).username %></h1>
+      <h2>Balance: <%= current_user(session).balance %></h2>
+      <a href="/logout">Log Out</a>
+    <% end %>
+    <a href=""
 
   </body>
 </html>
