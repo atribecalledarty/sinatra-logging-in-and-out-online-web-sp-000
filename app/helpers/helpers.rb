@@ -4,7 +4,7 @@ class Helpers
   end
   
   def is_logged_in?(session_hash)
-    
-    
+    session_hash.key?(:user_id)
+      
   end
 end
